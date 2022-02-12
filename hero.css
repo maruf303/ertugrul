@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+body{
+    display: grid;
+    background-color: rgba(95, 158, 160, 0.503);
+    place-items: center;
+    height: 100vh;
+}
+a{
+
+    text-decoration: none;
+}
+ .container{
+     position: relative;
+    height: 250px;
+    width: 350px;
+    background-color: cadetblue;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ .container .text{
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    display: grid;
+    user-select: none;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    justify-content: center;
+    align-content: center;
+    transition: 0.3s;
+}
+.container .text:hover{
+    transform: scale(1.05);
+}
+
+.container::before{
+    content: 'Thinking div';
+    border-radius: 6px;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    background-color: cornflowerblue;
+    top: -130px;
+    left: 45px;
+    transform: scale(0);
+    transition: 0.3s;
+}
+.container::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 19rem;
+    z-index: -1;
+    top: -37px;
+    transform: rotate(45deg);
+    background-color: cornflowerblue;
+}
+.container:hover::after,.container:hover::before{
+    transform: scale(1);
+}

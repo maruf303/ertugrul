@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shalimar', cursive;    
+}
+body{
+    background-color: #000;
+}
+.navbar{
+    position: fixed;
+    z-index: 9  ;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(48, 46, 46, 0.222);
+    width: 100%;
+    padding: 35px 7%;
+    margin: auto;
+    box-shadow: -0px 0px 10px black;
+}
+.navbar .logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 18px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    padding: 8px 15px;
+    color: white;
+    transition: 0.5s;
+}
+.navbar ul .cta{
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: 2px solid teal;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;    
+}
+.navbar ul .cta:hover{
+    border-radius: 20px;
+    background-color: teal;
+
+}
+.navbar ul li a:hover{
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px cyan;
+
+}
+main video{
+    /* z-index: 1000000000; */
+    /* background-color: rgb(237, 32, 32); */
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+main .content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0px 7%;
+}
+main .icon {
+    position: absolute;
+    display: inline-block;
+    right: 2%;
+    bottom: 10%;
+    
+}
+main .icon i {
+    display: block;
+    margin: 10px 0;
+}
+.icon a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.content .title{
+    color: white;
+    position: relative;
+    font-size: 35px;
+}
+  
+@media (max-width: 750px) {
+    .content .title{
+        color: white;
+        font-size: 25px;
+    }
+    main .icon i {
+        display: inline-block;
+        margin: 0px 10px;
+    }
+    main .icon {
+        position: absolute;
+        left: 7%;
+        bottom: 5%;
+    }  
+    .navbar ul li a{
+     display: none;
+    }
+    .navbar ul .cta{
+     display: block;
+    }
+    
+}
+@media (max-width: 480px) {
+    .content .title{
+        color: white;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 925px) {
+    .navbar ul li a{
+        display: none;
+       }
+       .navbar ul .cta{
+        display: block;
+       }
+}

